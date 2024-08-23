@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -6,13 +7,18 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../../assets/images/image1.png";
-
-const pages = ["Home", "Packages", "Locations", "Register", "About Us"];
+import logo from "../assets/images/image1.png";
+import { Container } from "@mui/material";
+import { pages } from "../Constants";
+// const pages = [
+//   { name: "Home", path: "/" },
+//   { name: "Locations", path: "/locations" },
+//   { name: "Packages", path: "/packages" },
+//   { name: "Contact Us", path: "/contact" },
+//   { name: "About Us", path: "/about" },
+// ];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -21,18 +27,19 @@ const Navbar = () => {
     setAnchorElNav(event.currentTarget);
   };
 
-      const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
-            component="a"
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -47,23 +54,11 @@ const Navbar = () => {
           >
             Kashmir Ki Kali
           </Typography>
-          {/* <Avatar
-            alt="Kashmir ki kali"
-            src={logo}
-            variant="rounded"
-            sx={{
-              display: { xs: "none", md: "flex" },
-              ml: 4,
-              width: 120,
-              height: 50,
-              mr: 3,
-            }}
-          /> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -89,18 +84,21 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map(({ name, path }) => (
+                <MenuItem key={name} onClick={handleCloseNavMenu}>
+                  <Typography component={Link} to={path} textAlign="center" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                    {name}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -122,10 +120,11 @@ const Navbar = () => {
               marginLeft: 30,
             }}
           >
-            {pages.map((page) => (
+            {pages.map(({ name, path }) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={name}
+                component={Link}
+                to={path}
                 sx={{
                   my: 2,
                   color: "white",
@@ -138,7 +137,7 @@ const Navbar = () => {
                   },
                 }}
               >
-                {page}
+                {name}
               </Button>
             ))}
           </Box>
@@ -147,4 +146,5 @@ const Navbar = () => {
     </AppBar>
   );
 };
+
 export default Navbar;
