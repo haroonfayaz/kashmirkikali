@@ -6,7 +6,6 @@ import routes from './routes';
 import Footer from './components/Footer';
 
 function App() {
-  console.log(routes,"routes")
   return (
     <Router>
       <Navbar />
