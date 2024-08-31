@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/kashmirkikali/static/css/main.23e92b15.css",
+    "main.js": "/kashmirkikali/static/js/main.33950071.js",
+    "static/media/srinagar1.jpg": "/kashmirkikali/static/media/srinagar1.203eff45edd0bb729994.jpg",
+    "static/media/aharbal.jpg": "/kashmirkikali/static/media/aharbal.f0d197df17cdb3185cce.jpg",
+    "static/media/gurez1.jpeg": "/kashmirkikali/static/media/gurez1.7f26dd588bec3c0cd153.jpeg",
+    "static/media/srinagar.jpg": "/kashmirkikali/static/media/srinagar.3b6bd88df27127e10705.jpg",
+    "static/media/p1.jpg": "/kashmirkikali/static/media/p1.06480084fe44eec76812.jpg",
+    "static/media/pahalgam1.jpg": "/kashmirkikali/static/media/pahalgam1.e69f28f7a017d12fa62d.jpg",
+    "static/media/p4.jpg": "/kashmirkikali/static/media/p4.cf11b22448aab678de54.jpg",
+    "static/media/p3.jpg": "/kashmirkikali/static/media/p3.afa63eca977d235d2182.jpg",
+    "static/media/gulmarg.jpeg": "/kashmirkikali/static/media/gulmarg.7656404aeaff12abf3d3.jpeg",
+    "static/media/p2.jpg": "/kashmirkikali/static/media/p2.48a66e30e7e4b154874c.jpg",
+    "static/media/vision.jpg": "/kashmirkikali/static/media/vision.448296d6ced2a26ee3e3.jpg",
+    "static/media/ladakh.jpg": "/kashmirkikali/static/media/ladakh.836b448eae6cc46bc494.jpg",
+    "static/media/Pahalgam2.jpg": "/kashmirkikali/static/media/Pahalgam2.5d25864719f7879c4ac6.jpg",
+    "static/media/background2.jpeg": "/kashmirkikali/static/media/background2.649c3b6c4b658cd8a0c7.jpeg",
+    "static/media/sonamarg.jpeg": "/kashmirkikali/static/media/sonamarg.74dd4b86c9a646d5d46f.jpeg",
+    "static/media/location1.jpg": "/kashmirkikali/static/media/location1.7f80ee79122c4d2e87a9.jpg",
+    "static/media/srinagar2.jpg": "/kashmirkikali/static/media/srinagar2.15acaee497c4c4fb4012.jpg",
+    "static/media/dodh1.jpg": "/kashmirkikali/static/media/dodh1.7648b23c6aedcf1686ad.jpg",
+    "static/media/dodhpather.jpg": "/kashmirkikali/static/media/dodhpather.1c2871b46817baa6526f.jpg",
+    "static/media/ladakh1.jpg": "/kashmirkikali/static/media/ladakh1.62d7f1cd28ed5c4bc0d7.jpg",
+    "static/media/gurez.jpg": "/kashmirkikali/static/media/gurez.4ac3b4d5866427c7d80b.jpg",
+    "static/media/ahar1.jpeg": "/kashmirkikali/static/media/ahar1.08b4f6963683c651b8c7.jpeg",
+    "static/media/pahalgam.jpeg": "/kashmirkikali/static/media/pahalgam.8734d94e7ceb89aea50b.jpeg",
+    "static/media/sonamarg2.jpeg": "/kashmirkikali/static/media/sonamarg2.c2b0ca260767c3d23319.jpeg",
+    "static/media/gulmarg1.jpeg": "/kashmirkikali/static/media/gulmarg1.1f630a7d28a29ee035b2.jpeg",
+    "static/media/dodh2.jpeg": "/kashmirkikali/static/media/dodh2.38e4ce3186997bfa0437.jpeg",
+    "static/media/sonamarg1.jpeg": "/kashmirkikali/static/media/sonamarg1.8a812aace56d84362af2.jpeg",
+    "index.html": "/kashmirkikali/index.html",
+    "main.23e92b15.css.map": "/kashmirkikali/static/css/main.23e92b15.css.map",
+    "main.33950071.js.map": "/kashmirkikali/static/js/main.33950071.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23e92b15.css",
+    "static/js/main.33950071.js"
+  ]
+}
