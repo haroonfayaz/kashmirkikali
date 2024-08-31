@@ -9,16 +9,8 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../assets/images/image1.png";
 import { Container } from "@mui/material";
 import { pages } from "../Constants";
-// const pages = [
-//   { name: "Home", path: "/" },
-//   { name: "Locations", path: "/locations" },
-//   { name: "Packages", path: "/packages" },
-//   { name: "Contact Us", path: "/contact" },
-//   { name: "About Us", path: "/about" },
-// ];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -86,7 +78,12 @@ const Navbar = () => {
             >
               {pages.map(({ name, path }) => (
                 <MenuItem key={name} onClick={handleCloseNavMenu}>
-                  <Typography component={Link} to={path} textAlign="center" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Typography
+                    component={Link}
+                    to={path}
+                    textAlign="center"
+                    sx={{ textDecoration: "none", color: "inherit" }}
+                  >
                     {name}
                   </Typography>
                 </MenuItem>
@@ -129,8 +126,8 @@ const Navbar = () => {
                   my: 2,
                   color: "white",
                   display: "block",
-                  fontWeight: 500,
-                  fontSize: 20,
+                  fontWeight: 700,
+                  fontSize: 14,
                   "&:hover": {
                     color: "grey",
                     backgroundColor: "white",
