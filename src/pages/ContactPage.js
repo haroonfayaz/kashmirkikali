@@ -12,10 +12,35 @@ import backgroundImage1 from "../assets/images/location1.jpg";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { composeValidators, validateEmail, validateRequired } from "../Utils";
+import emailjs from "emailjs-com";
 
-const onSubmit = (values) => {
-  console.log("Form submitted with values:", values);
-  alert("Thank you, we will get in touch!");
+const onSubmit = (values, form) => {
+  // EmailJS configuration
+  const serviceID = "service_n14ycqk"; // Your service ID
+  const templateID = "template_hmizibo"; // Your EmailJS template ID
+  const userID = "tyWxyFXwgAyal2HC-"; // Replace with your EmailJS user ID
+
+  // Mapping form data to EmailJS template variables
+  const templateParams = {
+    to_name: "Kashmir Ki Kali", // You can set a default recipient's name or collect it in the form
+    from_name: `${values.firstName} ${values.lastName}`, // Sender's first name
+    email: values.email, // Sender's email
+    phone: values.phoneNumber, // Sender's phone number
+    message: values.message, // The message content
+  };
+
+  // Sending email using EmailJS
+  emailjs.send(serviceID, templateID, templateParams, userID).then(
+    (response) => {
+      console.log("SUCCESS!", response.status, response.text);
+      alert("Thank you, we will get in touch!");
+      form.reset();
+    },
+    (error) => {
+      console.error("FAILED...", error);
+      alert("Failed to send email. Please try again later.");
+    }
+  );
 };
 
 const ContactPage = () => {
@@ -32,7 +57,7 @@ const ContactPage = () => {
       }}
     >
       <Form
-        onSubmit={onSubmit}
+        onSubmit={(values, form) => onSubmit(values, form)}
         render={({ handleSubmit, form, submitting }) => (
           <Box
             component="form"

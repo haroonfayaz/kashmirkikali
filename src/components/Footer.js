@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Paper,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import { pages } from "../Constants";
 import { Link } from "react-router-dom";
@@ -16,9 +7,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Footer = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
     <Box sx={{ backgroundColor: "primary.main", p: { md: 3 } }}>
       <Grid container padding={1} spacing={3}>
@@ -26,7 +14,6 @@ const Footer = () => {
           <Paper
             elevation={3}
             sx={{
-              height: isMobile ? "50px" : "80px",
               bgcolor: "white",
               alignItems: "center",
               borderRadius: "10px",
@@ -64,7 +51,6 @@ const Footer = () => {
           <Paper
             elevation={3}
             sx={{
-              height: isMobile ? "50px" : "80px",
               bgcolor: "white",
               alignItems: "center",
               borderRadius: "10px",
@@ -92,7 +78,6 @@ const Footer = () => {
           <Paper
             elevation={3}
             sx={{
-              height: isMobile ? "50px" : "80px",
               bgcolor: "white",
               alignItems: "center",
               borderRadius: "10px",
@@ -120,7 +105,6 @@ const Footer = () => {
           <Paper
             elevation={3}
             sx={{
-              height: isMobile ? "50px" : "80px",
               bgcolor: "white",
               alignItems: "center",
               borderRadius: "10px",

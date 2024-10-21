@@ -24,9 +24,40 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "react-datepicker/dist/react-datepicker.css";
 import InfoIcon from "@mui/icons-material/Info";
+import emailjs from "emailjs-com";
 
 const RegisterPage = () => {
   const today = new Date();
+  const onSubmit = (values, form) => {
+    // EmailJS configuration
+    const serviceID = "service_n14ycqk"; // Your EmailJS service ID
+    const templateID = "template_h1b8omo"; // Your EmailJS template ID
+    const userID = "tyWxyFXwgAyal2HC-"; // Your EmailJS user ID
+
+    // Mapping form data to EmailJS template variables
+    const templateParams = {
+      to_name: "Kashmir Ki Kali", // You can set a default recipient's name or collect it in the form
+      from_name: `${values.firstname} ${values.lastname}`, // Sender's first and last name
+      email: values.email, // Sender's email
+      phone: values.dialCode + values.phoneNumber, // Sender's full phone number
+      adults: values.adults, // Number of adults
+      children: values.children, // Number of children
+      date: values.date.toISOString().split("T")[0], // Format date to YYYY-MM-DD
+    };
+
+    // Sending email using EmailJS
+    emailjs.send(serviceID, templateID, templateParams, userID).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Thank you, we will get in touch!");
+        form.reset(); // Reset form values upon successful submission
+      },
+      (error) => {
+        console.error("FAILED...", error);
+        alert("Failed to send email. Please try again later.");
+      }
+    );
+  };
 
   return (
     <Grid height="99vh" container>
@@ -56,9 +87,7 @@ const RegisterPage = () => {
         </Stack>
         <Form
           initialValues={{}}
-          onSubmit={(values) => {
-            console.log(values);
-          }}
+          onSubmit={onSubmit}
           render={({ handleSubmit, form }) => (
             <form onSubmit={handleSubmit}>
               <Stack spacing={4} mt={1}>
