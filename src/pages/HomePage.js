@@ -1,7 +1,7 @@
 // src/pages/HomePage.js
 import React, { useCallback } from "react";
 import { Box, Button, Typography } from "@mui/material";
-import backgroundImage from "../assets/images/background2.jpeg";
+import backgroundImage from "../assets/images/srinagar.jpg";
 import { useNavigate } from "react-router-dom";
 import PackageHome from "../components/PackageHome";
 import LocationsHome from "../components/LocationsHome";

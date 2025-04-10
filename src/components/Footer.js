@@ -90,7 +90,7 @@ const Footer = () => {
                 Phone
               </Typography>
               <Typography variant="body1" color="primary">
-                M:+91-9858883373
+                M:+91-9596883373
               </Typography>
               <Typography variant="body1" color="primary">
                 T:0194-2416446
@@ -118,7 +118,7 @@ const Footer = () => {
               </Typography>
               <Box>
                 <a
-                  href="https://www.facebook.com/profile.php?id=100094492004593&mibextid=ZbWKwL"
+                  href="https://www.facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ paddingRight: "20px" }}
@@ -134,7 +134,7 @@ const Footer = () => {
                   />
                 </a>
                 <a
-                  href="https://instagram.com/hermosatrips?igshid=MzRlODBiNWFlZA=="
+                  href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ paddingRight: "20px" }}
@@ -150,7 +150,7 @@ const Footer = () => {
                   />
                 </a>
                 <a
-                  href="https://wa.me/9858883373"
+                  href="https://wa.me/9596883373"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ paddingRight: "20px" }}
